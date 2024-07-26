@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Adopt Pet</title>
+        <link rel="stylesheet" href="register_webpage.css">
+    </head>
+    <body>
+        <section class="header">
+            <h1>Adopt Pet</h1>
+        </section>
+        <div class="register">
+            <form  class="form_register" action="">
+                <h1>Register</h1>
+                <div class="user_information">
+                    <label for="user_name">Name</label>
+                    <input type="text" name="user_name" id="user_name">
+                    <br><br>
+                    <label for="user_email">E-mail</label>
+                    <input type="email" name="user_email" id="user_email">
+                    <br><br>
+                    <label for="user_password">Password</label>
+                    <input type="password" name="user_password" id="user_password">
+                    <br><br>
+                    <label for="pet_owner_check">Are you a pet owner?</label>
+                    <input type="checkbox" name="pet_owner_check" id="pet_owner_check">
+                </div>
+                <div class="pet_information">
+                    <p>If so, tell us more about it:</p>
+                    <label for="">Pet's name</label>
+                    <input type="text" name="pet_name" id="pet_name">
+                    <br><br>
+                    <label for="animal_species">Which animal do you have?</label>
+                    <input type="text" name="animal_species" id="animal_species">
+                    <br><br>
+                    <label for="pet_age">Pet's age</label>
+                    <input type="number" name="pet_age" id="pet_age">
+                    <br><br>
+                    <input type="radio" name="pet_sex" id="female_pet">Female
+                    <input type="radio" name="pet_sex" id="male_pet">Male
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register" class="submit_button">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
