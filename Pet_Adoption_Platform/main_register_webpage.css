@@ -55,6 +55,7 @@ body{
     align-items: center;
     align-content: center; 
     justify-content: center;
+    gap: 10px;
 }
 .user_options button{
     position: relative;
