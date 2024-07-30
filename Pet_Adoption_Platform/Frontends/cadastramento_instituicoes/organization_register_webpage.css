@@ -81,7 +81,7 @@ body{
 }
 .register textarea{
     padding: 30px 50px;
-    text-align: right;
+    text-align: right;  
 }
 .register .submit_button{
     width: 60%;
