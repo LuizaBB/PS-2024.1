@@ -66,3 +66,11 @@ body{
     background-color: white;
     font-size: 20px;
 }
+.main_register .extra_links{
+    position: relative;
+    top: 25px;
+    text-align: center;
+}
+.extra_links a{
+    color: black;
+}
