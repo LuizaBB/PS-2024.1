@@ -38,6 +38,16 @@ section button{
 section div .login_button{
     margin-right: 20px;
 }
+.flash_sucess{
+    position: relative;
+    top: 100px;
+    background-color: green;
+}
+.flash_fail{
+    position: relative;
+    top: 100px;
+    background-color: red;
+}
 .div_horizontal_bar{
     position: absolute;
     width: 100%;

@@ -71,9 +71,11 @@ body{
     border-radius: 10px;
     padding: 10px 20px;
 }
-/* .focus_radio{
-    
-} */
+.organization_focus{
+    list-style-type: none;
+    column-count: 2;
+    display: inline-block;
+}
 .extra_link{
     text-align: center;
 }
@@ -82,7 +84,7 @@ body{
     text-decoration: underline;
     text-decoration-color: black;
 }
-.register textarea{
+.register .organization_description{
     padding: 30px 50px;
     text-align: right;  
 }
