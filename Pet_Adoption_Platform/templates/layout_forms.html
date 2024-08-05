@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+            <title>AdoPet</title>
+        {% endif %}
+            {% block css %}
+            {% endblock css %}
+    </head>
+    <body>
+        {% with messages= get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for caterogy, message in messages %}
+                    <divc class="flash"> 
+                        {{ message }} 
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block forms %}
+        {% endblock forms %}
+    </body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "layout_forms.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{url_for('static',filename='organization_register_webpage.css')}}">
+{% endblock css %}
+{% block forms %}
+    <div class="centralization">
+        <div class="register">
+            <form class="form_register" action="" method="POST">
+                {{ forms.hidden_tag() }}
+                <h1>Organização</h1>
+                <label for="organization_name">Nome</label>
+                {{ forms.name(class="organization_name") }}
+                <label for="organization_email">E-mail</label>
+                {{ forms.email(class="organization_email") }}
+                <label for="organization_password">Senha</label>
+                {{ forms.password(class="organization_password") }}
+                <label for="organization_focus">Foco</label>
+                <div class="focus_radio">
+                    {{ forms.focus(class="organization_focus") }}
+                </div>
+                <label for="organization_description">Descrição</label>
+                {{ forms.description(class="organization_description") }}
+                <div class="extra_link">
+                    <a href="{{ url_for('render_login')}}"> Já Possuo Conta</a>
+                </div>
+                <div class="button">
+                    {{ forms.submit(class="submit_button") }}
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock forms %}

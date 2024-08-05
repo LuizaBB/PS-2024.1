@@ -1,0 +1,24 @@
+{% extends "layout_forms.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{url_for('static',filename='login_webpage.css')}}">
+{% endblock css %}
+{% block forms %}
+    <div class="login">
+        <form class="form_login" action="" method="POST">
+            {{ forms.hidden_tag() }}
+            <h1>Login</h1>
+            <label for="email">E-mail</label>
+            {{ forms.email}}
+            <label for="password">Senha</label>
+            {{ forms.password}}
+            <div class="extra_links">
+                <a href="{{url_for('render_main_register')}}">Criar conta</a>
+                <a href="">Esqueci senha</a>
+            </div>
+            <div class="button">
+                {{ forms.submit(class="submit_button")}}
+            </div>
+        </form>
+    </div>
+{% endblock forms %}
