@@ -1,0 +1,76 @@
+body{
+    position: relative;
+    margin: 0px;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: inline;
+    column-count: 2;
+    column-gap: 20px;
+    background-color: #9fc;
+}
+.header h1{
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 10px;
+}
+.main_page{
+    /* position: relative;
+    background-color: white;
+    text-align: center; */
+    background-color: white;
+    width: 100%;
+    /* max-width: 1320px; */
+    height: 60em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.animal_part{
+    width: 100%;
+}
+.animal_pages{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    border-top: 4px solid black;
+    padding: 100px;
+    columns: 3;
+}
+.animal_title{
+    /* width: 115%; */
+    width: auto;
+    text-align: center;
+}
+
+.site_block{
+    margin: center;
+    width: 40%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 30px 30px;
+}
+li{
+    list-style-type: none;
+}
+a{
+    color: black;   
+    text-decoration: none;
+    word-break: break-word;
+}
+ 
+
+.animal_pages :hover{
+    background-color: #9fc;
+}
