@@ -28,5 +28,9 @@ def render_institucion_register():
         return redirect(url_for('render_home'))
     return render_template("organization_register.html", title="Organization", forms=institucion_form)
 
+@web.route("/educational_resources")
+def render_educational_resources():
+    return render_template("educational_page.html")
+
 if __name__=="__main__":
     web.run(debug=True)
