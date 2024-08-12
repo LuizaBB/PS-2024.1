@@ -9,9 +9,27 @@
             {{ forms.hidden_tag() }}
             <h1>Login</h1>
             <label for="email">E-mail</label>
-            {{ forms.email}}
+            {% if forms.email.errors %}
+                    {{ forms.email }}
+                    <div class="invalid_feedback">
+                        {% for error in forms.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ forms.email }}
+                {% endif %}
             <label for="password">Senha</label>
-            {{ forms.password}}
+            {% if forms.password.errors %}
+                    {{ forms.password }}
+                    <div class="invalid_feedback">
+                        {% for error in forms.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ forms.password }}
+                {% endif %}
             <div class="extra_links">
                 <a href="{{url_for('render_main_register')}}">Criar conta</a>
                 <a href="">Esqueci senha</a>

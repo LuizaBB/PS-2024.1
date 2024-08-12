@@ -75,3 +75,6 @@ body{
     align-content: center; 
     justify-content: center;
 }
+.invalid_feedback{
+    background-color: red;
+}
