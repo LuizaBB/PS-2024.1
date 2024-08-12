@@ -10,17 +10,63 @@
                 {{ forms.hidden_tag() }}
                 <h1>Organização</h1>
                 <label for="organization_name">Nome</label>
-                {{ forms.name(class="organization_name") }}
+                {% if forms.name.errors %}
+                    {{ forms.name(class="organization_name_invalid") }}
+                    <div class="invalid_feedback">
+                        {% for error in forms.name.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ forms.name(class="organization_name") }}
+                {% endif %}
                 <label for="organization_email">E-mail</label>
-                {{ forms.email(class="organization_email") }}
+                {% if forms.email.errors %}
+                    {{ forms.email(class="organization_email_invalid") }}
+                    <div class="invalid_feedback">
+                        {% for error in forms.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ forms.email(class="organization_email") }}
+                {% endif %}
                 <label for="organization_password">Senha</label>
-                {{ forms.password(class="organization_password") }}
+                {% if forms.password.errors %}
+                    {{ forms.password(class="organization_password_invalid") }}
+                    <div class="invalid_feedback">
+                        {% for error in forms.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ forms.password(class="organization_password") }}
+                {% endif %}
                 <label for="organization_focus">Foco</label>
                 <div class="focus_radio">
+                {% if forms.focus.errors %}
+                    {{ forms.focus(class="organization_focus_invalid") }}
+                    <div class="invalid_feedback">
+                        {% for error in forms.focus.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
                     {{ forms.focus(class="organization_focus") }}
+                {% endif %}
                 </div>
                 <label for="organization_description">Descrição</label>
-                {{ forms.description(class="organization_description") }}
+
+                {% if forms.description.errors %}
+                    {{ forms.focus(class="organization_description_invalid") }}
+                    <div class="invalid_feedback">
+                        {% for error in forms.description.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ forms.description(class="organization_description") }}
+                {% endif %}
                 <div class="extra_link">
                     <a href="{{ url_for('render_login')}}"> Já Possuo Conta</a>
                 </div>
