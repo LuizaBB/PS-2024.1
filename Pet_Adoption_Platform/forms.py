@@ -5,9 +5,9 @@ from wtforms.validators import DataRequired, Length, Email
 class Institution_Registration_Form(FlaskForm):
     name=StringField("organization_name", validators=[DataRequired(), Length(min=10,max=20)])
     email=StringField("organization_email", validators=[DataRequired(), Email()])
-    password=PasswordField("organization_password", validators=[DataRequired()])
+    password=PasswordField("organization_password", validators=[DataRequired(), Length(min=5,max=15)])
     focus= RadioField('Foco', choices=[('dog','Cão'),('cat','Gato')], validators=[DataRequired()])
-    description= StringField("organization_description", validators=[Length(min=10, max=50)])
+    description= StringField("organization_description")
     submit= SubmitField("Criar conta")
 
 class Tutor_Registration_Form(FlaskForm):
