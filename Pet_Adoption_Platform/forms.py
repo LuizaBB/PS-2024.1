@@ -13,7 +13,7 @@ class Institution_Registration_Form(FlaskForm):
 class Tutor_Registration_Form(FlaskForm):
       name= StringField("Nome", validators=[DataRequired(), Length(min=3, max=10)])
       email= StringField("Email", validators=[DataRequired(), Email()])
-      password= PasswordField("Password", validators=[DataRequired()])
+      password= PasswordField("Password", validators=[DataRequired(), Length(min=5,max=15)])
       submit= SubmitField("Continuar")
 
 class Pet_Registration_Form(FlaskForm):
